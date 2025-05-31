@@ -1,0 +1,1 @@
+gcc main.c include/calculations.c include/area_calculations.c include/angle_calculations.c -o main -lm
