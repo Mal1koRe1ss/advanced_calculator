@@ -96,7 +96,7 @@ make
 
 ### Building manually
 ```bash
-gcc main.c include/calculations.c include/area_calculations.c include/angle_calculations.c -o main -lm
+gcc -Wall -Wextra -Iinclude main.c include/calculations.c include/area_calculations.c include/angle_calculations.c include/utils.c include/menus.c include/perimeter_calculations.c include/bitwise.c include/science_and_engineering.c include/physical_calculations.c -o main -lm
 ```
 
 # ToDo
