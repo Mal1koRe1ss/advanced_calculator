@@ -28,6 +28,10 @@ double triangle_area(double a, double h) {
     return (a*h)/2;
 }
 
-double square_area(double a, double b) {
+double square_area(double a) {
+    return a*a;
+}
+
+double rectangle_area(double a, double b) {
     return a*b;
 }

@@ -21,6 +21,7 @@
 * Polygon properties (diagonals, interior angles)<br>
 * Triangle area<br>
 * Square area<br>
+* Rectangle area<br>
 
 ### Advanced Functions
 
@@ -29,10 +30,44 @@
 * Exponential functions<br>
 * Trigonometric functions<br>
 * Circle arc length calculation<br>
-
+* Celsius-Fahrenheit calculation<br>
+* Kilometer mile calculation<br>
+  
 ### Angle Calculations
 
 * Triangle's missing angle calculation<br>
+
+### Bitwise Calculations
+
+* Bitwise and calculation<br>
+* Bitwise or calculation<br>
+* Bitwise xor calculation<br>
+* Bitwise left shift calculation<br>
+* Bitwise right shift calculation<br>
+* Bitwise not calculation<br>
+
+### Perimeter Calculations
+
+* Squares perimeter<br>
+* Triangles perimeter<br>
+* Circles perimeter<br>
+* Parallelograms perimeter<br>
+* Equilateral Triangles perimeter<br>
+* nGens perimeter<br>
+* Trapezoids perimeter<br>
+* Circle arcs perimeter<br>
+* Circle piece perimeter<br>
+* Elipse perimeter<br>
+* Cardioid perimeter<br>
+
+### Science, Engineering and Physical Calculations
+
+* Sinus calculation<br>
+* Cosinus calculation<br>
+* Logarithmic calculations<br>
+* Kinetic energy calculation<br>
+* Gravitational force calculation<br>
+
 
 # Getting Started
 
@@ -49,21 +84,6 @@ Clone the repo.
 git clone https://github.com/yourusername/advanced_calculator.git
 cd advanced_calculator
 ```
-
-
-### Building with CMake
-```bash
-# Linux shell script
-./cmake.sh
-
-# Manually
-mkdir build
-cd build
-cmake ..
-make
-./main
-```
-
 ### Building with Makefile
 ```bash
 make
@@ -84,4 +104,4 @@ gcc main.c include/calculations.c include/area_calculations.c include/angle_calc
 **New Calculations**<br>
 **Multiple Languages(Turkish,Russian etc.)**<br>
 **Functional Calculations**<br>
-**Cleaner code**<br>
+~~**Cleaner code**~~<br>
