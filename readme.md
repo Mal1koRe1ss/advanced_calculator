@@ -4,7 +4,7 @@
 ## Key Features
 
 * Advanced Calculations: Functions, quadratic equations, exponentials, trigonometry<br>
-* Geometric Computations: Circle, trapezoid, rhombus, polygon, and triangle calculations<br>
+* Geometric Computations: Circle, trapezoid, rhombus, polygon, triangle and other shapes<br>
 * Angle Calculations: Triangle interior angle computations<br>
 * Custom Settings: Choose between different π values (3 or 3.14)<br>
 * Cross-Platform: Works seamlessly on Linux, Windows, and macOS<br>
