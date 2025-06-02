@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "menus.h"
+#include "utils.h"
+
+double pi = 3.14;
 
 #ifdef _WIN32 
     // ? Shitty OS
@@ -34,43 +37,48 @@ void clear_console() {
     printf("\e[1;1H\e[2J");
 }
 
-void menu(int running, double pi) {
+void menu(int running) {
     while (running)
     {
         int choice;
         clear_console();
         printf("1 - Area Calculations\n");
-        printf("2 - Perimeter Calculations\n");
-        printf("3 - Angle Calculations\n");
-        printf("4 - Advanced(functions etc.) Calculations\n");
-        printf("5 - Settings\n");
-        printf("6 - Exit\n");
+        printf("2 - Angle Calculations\n");
+        printf("3 - Advanced(functions etc.) Calculations\n");
+        printf("4 - Bitwise Calculations\n");
+        printf("5 - Perimeter Calculations\n");
+        printf("6 - Settings\n");
+        printf("7 - Exit\n");
         printf("Your choice : ");
         scanf("%d", &choice);
         
         switch (choice)
         {
         case 1: {
-            menu_area(pi);
+            menu_area();
             break;
         }
         case 2: {
-            menu_perimeter(pi);
-            break;
-            }
-        case 3: {
             menu_angle();
             break;
             }
+        case 3: {
+            menu_advanced();
+            break;
+            }
         case 4: {
-            menu_advanced(pi);
+            menu_bitwise();
             break;
             }
         case 5: {
-            menu_settings(pi);
+            menu_perimeter();
             break;
             }
         case 6: {
+            menu_settings();
+            break;
+        }
+        case 7: {
             running = 0;
             menu_exit(running);
             break;
@@ -86,3 +94,6 @@ void menu(int running, double pi) {
   }
 }
 
+void change_pi(double new_value) {
+    pi = new_value;
+}

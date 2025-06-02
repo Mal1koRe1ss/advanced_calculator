@@ -13,7 +13,7 @@ void menu_exit() {
     printf("Exiting...\n");
 }
 
-void menu_area(double pi) {
+void menu_area() {
     int area_choice;
     clear_console();
     printf("1 - Circles Area\n");
@@ -34,6 +34,7 @@ void menu_area(double pi) {
             clear_console();
             printf("Radius of the Circle : ");
             scanf("%d", &radius);
+            extern double pi;
             printf("Answer : %.2f\n", circle_area(pi, radius));
             wait_for_enter_key();
             break;
@@ -123,7 +124,8 @@ void menu_area(double pi) {
     }
 }
 
-void menu_perimeter(double pi) {
+void menu_perimeter() {
+    extern double pi;
     int perimeter_choice;
     clear_console();
     printf("1 - Squares Perimeter\n");
@@ -271,7 +273,8 @@ void menu_perimeter(double pi) {
     }
 }
 
-void menu_advanced(double pi) {
+void menu_advanced() {
+    extern double pi;
     int advanced_choice;
     clear_console();
     printf("1 - f(x)\n");
@@ -478,7 +481,7 @@ void menu_angle() {
     }
 }
 
-void menu_settings(double pi) {
+void menu_settings() {
     int settings_choice;
     clear_console();
     printf("1 - Change the value of π\n");
@@ -489,6 +492,7 @@ void menu_settings(double pi) {
     {
     case 1: {
         int pi_choice;
+        double new_value;
         clear_console();
 
         printf("Which π value you are going to use?\n");
@@ -497,10 +501,12 @@ void menu_settings(double pi) {
         printf("Your choice: ");
         scanf("%d", &pi_choice);
 
-        pi = (pi_choice == 1) ? 3 : 3.14;
-
+        new_value = (pi_choice == 1) ? 3 : 3.14;
+        change_pi(new_value);
+        
         clear_console();
         printf("Selected π value: ");
+        extern double pi;
         (pi == (int)pi)
             ? printf("%d (integer)\n", (int)pi)
             : printf("%.2f (float)\n", pi);
@@ -518,6 +524,7 @@ void menu_settings(double pi) {
 
 void menu_bitwise() {
     int bitwise_choice;
+    clear_console();
     printf("1 - Bitwise AND (&)\n");
     printf("2 - Bitwise OR (|)\n");
     printf("3 - Bitwise XOR (^)\n");
@@ -536,7 +543,7 @@ void menu_bitwise() {
         scanf("%d", &a);
         printf("Second number : ");
         scanf("%d", &b);
-        printf("Answer : %d", bitwise_and(a, b));
+        printf("Answer : %d\n", bitwise_and(a, b));
         wait_for_enter_key();
         break;
     }
@@ -546,7 +553,7 @@ void menu_bitwise() {
         scanf("%d", &a);
         printf("Second number : ");
         scanf("%d", &b);
-        printf("Answer : %d", bitwise_or(a, b));
+        printf("Answer : %d\n", bitwise_or(a, b));
         wait_for_enter_key();
         break;
     }
@@ -556,7 +563,7 @@ void menu_bitwise() {
         scanf("%d", &a);
         printf("Second number : ");
         scanf("%d", &b);
-        printf("Answer : %d", bitwise_xor(a, b));
+        printf("Answer : %d\n", bitwise_xor(a, b));
         wait_for_enter_key();
         break;
     }
@@ -566,7 +573,7 @@ void menu_bitwise() {
         scanf("%d", &a);
         printf("Second number : ");
         scanf("%d", &b);
-        printf("Answer : %d", bitwise_lshift(a, b));
+        printf("Answer : %d\n", bitwise_lshift(a, b));
         wait_for_enter_key();
         break;  
     }
@@ -576,7 +583,7 @@ void menu_bitwise() {
         scanf("%d", &a);
         printf("Second number : ");
         scanf("%d", &b);
-        printf("Answer : %d", bitwise_rshift(a, b));
+        printf("Answer : %d\n", bitwise_rshift(a, b));
         wait_for_enter_key();
         break;
     }
@@ -586,7 +593,7 @@ void menu_bitwise() {
         scanf("%d", &a);
         printf("Second number : ");
         scanf("%d", &b);
-        printf("Answer : %d", bitwise_not(a, b));
+        printf("Answer : %d\n", bitwise_not(a, b));
         wait_for_enter_key();
         break;
     }
